@@ -13,9 +13,13 @@
   <button id="mic">Request Microphone</button><br/><br/><br/>
 
   <form>
-    <input name="query" value="camera" />
+    <select name="query">
+        <option value="camera">camera</option>
+        <option value="microphone">microphone</option>
+        <option value="unsupported">unsupported</option>
+    </select>
     <button id="request">Query Permission</button><br/>
-    <textarea id="result" cols=50></textarea>
+    <textarea id="result" cols=40 rows="10"></textarea>
   </form>
   <script src="index.js"></script>
 </body>
