@@ -11,8 +11,11 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
             ref: nastia/ref_fix
-            path: actions
+            path: custom_actions
             repository: duckduckgo/native-github-asana-sync
 
-      - name: Checkout actions repo # required so we can reference the actions locally
-        uses: ./actions/.github/workflows/test-workflow.yml
+      - name: Debug
+        run: ls ./custom_actions
+
+      - name: Run Test flow
+        uses: ./custom_actions/.github/workflows/test-workflow.yml
