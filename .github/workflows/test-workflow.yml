@@ -1,7 +1,6 @@
 name: Test
 
-on:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -15,7 +14,7 @@ jobs:
             repository: duckduckgo/native-github-asana-sync
 
       - name: Debug
-        run: ls ./custom_actions
+        run: ls ./custom_actions/.github/workflows/
 
       - name: Run Test flow
         uses: ./custom_actions/.github/workflows/test-workflow.yml
