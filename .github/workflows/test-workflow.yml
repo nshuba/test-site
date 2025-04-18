@@ -18,3 +18,5 @@ jobs:
 
       - name: Run Test flow
         uses: ./custom_actions/.github/actions/test/
+        with:
+          asana_pat: ${{ secrets.ASANA_PAT }}
